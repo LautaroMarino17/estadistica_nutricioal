@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f0fe, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .nav-btn {
+      background-color: #4a90e2;
+      color: white;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-btn:hover {
+      background-color: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido al Sistema Nutricional</h1>
+  
+  <a href="/grasa_corp" class="nav-btn">Predicción de % graso</a>
+  <a href="/resume" class="nav-btn">Informe del paciente</a>
+  <a href="/data" class="nav-btn">Enviar nombre de planilla</a>
+  <a href="/stats" class="nav-btn">Enviar lista de planillas</a>
+</body>
+</html>

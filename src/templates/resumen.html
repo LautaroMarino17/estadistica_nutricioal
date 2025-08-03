@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resumen Nutricional</title>
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #eaf4fc, #fefefe);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 480px;
+            transition: transform 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+        }
+
+        input[type="text"], input[type="string"] {
+            width: 100%;
+            padding: 0.65rem 0.9rem;
+            font-size: 1rem;
+            border: 1.8px solid #ccc;
+            border-radius: 10px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+            outline: none;
+        }
+
+        button {
+            margin-top: 1.8rem;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: bold;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2e86c1;
+        }
+
+        #result {
+            margin-top: 2rem;
+            background: #f0f8ff;
+            padding: 1.25rem;
+            border-left: 6px solid #3498db;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.1);
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            white-space: pre-wrap;
+        }
+
+        #result.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <form id="resumeForm">
+        <h1>Informe Nutricional</h1>
+        <label for="coleccion">Nombre del paciente o colección:</label>
+        <input type="text" id="coleccion" name="coleccion" required />
+        <button type="submit">Generar Resumen</button>
+        <div id="result"></div>
+    </form>
+
+    <script>
+        document.getElementById('resumeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const data = {
+                user_name: document.getElementById('coleccion').value
+            };
+
+            const resultEl = document.getElementById('result');
+            resultEl.classList.remove('visible');
+            resultEl.textContent = 'Cargando...';
+
+            try {
+                const res = await fetch('/llm_resume', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                if (!res.ok) throw new Error('Error en la solicitud');
+
+                const result = await res.json();
+                let finalText = typeof result === 'string' ? result : JSON.parse(result.response).output;
+                resultEl.textContent = finalText;
+                resultEl.classList.add('visible');
+            } catch (err) {
+                resultEl.textContent = 'Error: ' + err.message;
+                resultEl.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+</html>

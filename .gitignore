@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.db
+*.sqlite3
+
+# FastAPI / Uvicorn / Logs
+*.log
+*.env
+.env.*
+.DS_Store
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Tests
+htmlcov/
+.tox/
+.coverage
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Git
+*.orig
+src/routes/credenciales.json

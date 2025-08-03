@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción de % de grasa corporal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #e8f0fe, #ffffff);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 2rem 2.5rem;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            margin-bottom: 1.25rem;
+            border: 1.8px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #4a90e2;
+            outline: none;
+            box-shadow: 0 0 5px #4a90e266;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.7rem;
+            background-color: #4a90e2;
+            color: white;
+            font-weight: bold;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        #result {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-left: 6px solid #4a90e2;
+            background-color: #eef4fb;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            white-space: pre-wrap;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <form id="predictForm">
+        <h1>Predicción de % de grasa corporal</h1>
+
+        <label for="edad">Edad:</label>
+        <input type="number" step="any" id="edad" name="edad" required>
+
+        <label for="peso">Peso:</label>
+        <input type="number" step="any" id="peso" name="peso" required>
+
+        <label for="altura">Altura:</label>
+        <input type="number" step="any" id="altura" name="altura" required>
+
+        <button type="submit">Predecir</button>
+
+        <div id="result"></div>
+    </form>
+
+    <script>
+        document.getElementById('predictForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const data = {
+                edad: parseFloat(document.getElementById('edad').value),
+                peso: parseFloat(document.getElementById('peso').value),
+                altura: parseFloat(document.getElementById('altura').value)
+            };
+
+            const res = await fetch('/predict', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+            document.getElementById('result').innerText = "valor_predicho: " + result.predicted_value;
+        });
+    </script>
+</body>
+</html>

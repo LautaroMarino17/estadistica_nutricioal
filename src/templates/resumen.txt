@@ -1,0 +1,44 @@
+<!-- resumen.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen</title>
+</head>
+<body>
+    <h1>Ingresar colección para el informe</h1>
+    <form id="resumeForm">
+        <label for="coleccion">Colección:</label>
+        <input type="string" id="coleccion" name="coleccion" required><br><br>
+        <button type="submit">Resumir progreso del paciente</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        document.getElementById('resumeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const data = {
+                user_name: document.getElementById('coleccion').value  // Enviamos el nombre como string
+            };
+
+            try {
+                const res = await fetch('/llm_resume', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                if (!res.ok) throw new Error('Error en la solicitud');
+
+                const result = await res.json();
+                document.getElementById('result').innerText = 
+                    typeof result === 'string' ? result : JSON.stringify(result, null, 2);
+            } catch (err) {
+                document.getElementById('result').innerText = 'Error: ' + err.message;
+            }
+        });
+    </script>
+</body>
+</html>

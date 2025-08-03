@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enviar Planilla</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077ff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #005dc1;
+    }
+
+    .status {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Enviar Nombre de Planilla</h2>
+    <input type="text" id="planillaInput" placeholder="Nombre de la planilla" />
+    <button onclick="enviarPlanilla()">Enviar</button>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script>
+    async function enviarPlanilla() {
+      const input = document.getElementById('planillaInput').value;
+      const status = document.getElementById('status');
+      status.textContent = '';
+      status.className = 'status';
+
+      if (!input) {
+        status.textContent = 'Por favor ingresa el nombre de la planilla.';
+        status.classList.add('error');
+        return;
+      }
+
+      try {
+        const response = await fetch('/data', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ planilla: input })
+        });
+
+        if (response.ok) {
+          status.textContent = 'Planilla enviada correctamente.';
+          status.classList.add('success');
+        } else {
+          const err = await response.json();
+          status.textContent = `Error: ${err.detail || 'No se pudo enviar.'}`;
+          status.classList.add('error');
+        }
+      } catch (error) {
+        status.textContent = 'Error de conexión con el servidor.';
+        status.classList.add('error');
+      }
+    }
+  </script>
+</body>
+</html>

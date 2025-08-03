@@ -1,0 +1,602 @@
+[
+    {
+        "edad": 50,
+        "peso": 68.9,
+        "altura": 1.53,
+        "porcentaje_grasa": 29.41
+    },
+    {
+        "edad": 45,
+        "peso": 59.3,
+        "altura": 1.54,
+        "porcentaje_grasa": 24.42
+    },
+    {
+        "edad": 54,
+        "peso": 64.5,
+        "altura": 1.93,
+        "porcentaje_grasa": 25.46
+    },
+    {
+        "edad": 57,
+        "peso": 115.2,
+        "altura": 1.7,
+        "porcentaje_grasa": 45
+    },
+    {
+        "edad": 20,
+        "peso": 52.5,
+        "altura": 1.79,
+        "porcentaje_grasa": 14.34
+    },
+    {
+        "edad": 65,
+        "peso": 52.4,
+        "altura": 1.86,
+        "porcentaje_grasa": 22.99
+    },
+    {
+        "edad": 49,
+        "peso": 90.8,
+        "altura": 1.58,
+        "porcentaje_grasa": 38.36
+    },
+    {
+        "edad": 29,
+        "peso": 59.1,
+        "altura": 1.81,
+        "porcentaje_grasa": 16.14
+    },
+    {
+        "edad": 28,
+        "peso": 114.9,
+        "altura": 1.9,
+        "porcentaje_grasa": 38.17
+    },
+    {
+        "edad": 49,
+        "peso": 90.2,
+        "altura": 1.64,
+        "porcentaje_grasa": 36.1
+    },
+    {
+        "edad": 51,
+        "peso": 57.1,
+        "altura": 2.0,
+        "porcentaje_grasa": 19.62
+    },
+    {
+        "edad": 50,
+        "peso": 52.2,
+        "altura": 1.54,
+        "porcentaje_grasa": 22.93
+    },
+    {
+        "edad": 65,
+        "peso": 63.3,
+        "altura": 1.78,
+        "porcentaje_grasa": 28.39
+    },
+    {
+        "edad": 53,
+        "peso": 82.4,
+        "altura": 1.98,
+        "porcentaje_grasa": 29.79
+    },
+    {
+        "edad": 46,
+        "peso": 100.8,
+        "altura": 1.88,
+        "porcentaje_grasa": 38.42
+    },
+    {
+        "edad": 61,
+        "peso": 50.7,
+        "altura": 1.59,
+        "porcentaje_grasa": 23.17
+    },
+    {
+        "edad": 25,
+        "peso": 67.9,
+        "altura": 1.98,
+        "porcentaje_grasa": 18.27
+    },
+    {
+        "edad": 57,
+        "peso": 85.3,
+        "altura": 1.54,
+        "porcentaje_grasa": 38.26
+    },
+    {
+        "edad": 39,
+        "peso": 116.7,
+        "altura": 1.92,
+        "porcentaje_grasa": 41.12
+    },
+    {
+        "edad": 63,
+        "peso": 91.8,
+        "altura": 1.86,
+        "porcentaje_grasa": 39.22
+    },
+    {
+        "edad": 48,
+        "peso": 91.0,
+        "altura": 1.84,
+        "porcentaje_grasa": 35.51
+    },
+    {
+        "edad": 55,
+        "peso": 105.6,
+        "altura": 1.6,
+        "porcentaje_grasa": 43.21
+    },
+    {
+        "edad": 59,
+        "peso": 95.0,
+        "altura": 1.88,
+        "porcentaje_grasa": 37.45
+    },
+    {
+        "edad": 29,
+        "peso": 71.6,
+        "altura": 1.57,
+        "porcentaje_grasa": 25.08
+    },
+    {
+        "edad": 32,
+        "peso": 96.7,
+        "altura": 1.62,
+        "porcentaje_grasa": 36.88
+    },
+    {
+        "edad": 20,
+        "peso": 114.1,
+        "altura": 1.97,
+        "porcentaje_grasa": 34.98
+    },
+    {
+        "edad": 19,
+        "peso": 54.0,
+        "altura": 1.82,
+        "porcentaje_grasa": 12.09
+    },
+    {
+        "edad": 36,
+        "peso": 116.5,
+        "altura": 1.9,
+        "porcentaje_grasa": 40.79
+    },
+    {
+        "edad": 43,
+        "peso": 104.0,
+        "altura": 1.74,
+        "porcentaje_grasa": 41.74
+    },
+    {
+        "edad": 51,
+        "peso": 89.5,
+        "altura": 1.6,
+        "porcentaje_grasa": 38.44
+    },
+    {
+        "edad": 18,
+        "peso": 59.4,
+        "altura": 1.89,
+        "porcentaje_grasa": 12.76
+    },
+    {
+        "edad": 44,
+        "peso": 58.9,
+        "altura": 1.86,
+        "porcentaje_grasa": 22.14
+    },
+    {
+        "edad": 50,
+        "peso": 119.5,
+        "altura": 1.93,
+        "porcentaje_grasa": 44.97
+    },
+    {
+        "edad": 24,
+        "peso": 83.2,
+        "altura": 1.67,
+        "porcentaje_grasa": 29.46
+    },
+    {
+        "edad": 39,
+        "peso": 72.1,
+        "altura": 1.78,
+        "porcentaje_grasa": 25.3
+    },
+    {
+        "edad": 47,
+        "peso": 71.4,
+        "altura": 1.7,
+        "porcentaje_grasa": 30.3
+    },
+    {
+        "edad": 24,
+        "peso": 84.5,
+        "altura": 1.56,
+        "porcentaje_grasa": 30.27
+    },
+    {
+        "edad": 39,
+        "peso": 80.6,
+        "altura": 1.71,
+        "porcentaje_grasa": 28.05
+    },
+    {
+        "edad": 30,
+        "peso": 92.5,
+        "altura": 1.76,
+        "porcentaje_grasa": 33.7
+    },
+    {
+        "edad": 31,
+        "peso": 51.6,
+        "altura": 1.73,
+        "porcentaje_grasa": 14.69
+    },
+    {
+        "edad": 56,
+        "peso": 69.9,
+        "altura": 1.89,
+        "porcentaje_grasa": 28.15
+    },
+    {
+        "edad": 25,
+        "peso": 65.4,
+        "altura": 1.56,
+        "porcentaje_grasa": 22.81
+    },
+    {
+        "edad": 51,
+        "peso": 99.9,
+        "altura": 1.89,
+        "porcentaje_grasa": 40.31
+    },
+    {
+        "edad": 51,
+        "peso": 53.3,
+        "altura": 1.52,
+        "porcentaje_grasa": 23.84
+    },
+    {
+        "edad": 20,
+        "peso": 97.8,
+        "altura": 1.54,
+        "porcentaje_grasa": 33.59
+    },
+    {
+        "edad": 43,
+        "peso": 81.3,
+        "altura": 1.53,
+        "porcentaje_grasa": 34.52
+    },
+    {
+        "edad": 43,
+        "peso": 54.1,
+        "altura": 1.94,
+        "porcentaje_grasa": 18.26
+    },
+    {
+        "edad": 25,
+        "peso": 52.7,
+        "altura": 1.62,
+        "porcentaje_grasa": 15.29
+    },
+    {
+        "edad": 60,
+        "peso": 110.5,
+        "altura": 1.83,
+        "porcentaje_grasa": 44.31
+    },
+    {
+        "edad": 47,
+        "peso": 76.5,
+        "altura": 1.97,
+        "porcentaje_grasa": 28.9
+    },
+    {
+        "edad": 33,
+        "peso": 54.1,
+        "altura": 1.97,
+        "porcentaje_grasa": 15.68
+    },
+    {
+        "edad": 32,
+        "peso": 99.7,
+        "altura": 1.93,
+        "porcentaje_grasa": 34.24
+    },
+    {
+        "edad": 55,
+        "peso": 67.7,
+        "altura": 1.59,
+        "porcentaje_grasa": 27.98
+    },
+    {
+        "edad": 34,
+        "peso": 78.3,
+        "altura": 1.72,
+        "porcentaje_grasa": 29.28
+    },
+    {
+        "edad": 60,
+        "peso": 89.3,
+        "altura": 1.93,
+        "porcentaje_grasa": 36.27
+    },
+    {
+        "edad": 62,
+        "peso": 75.7,
+        "altura": 1.91,
+        "porcentaje_grasa": 33.08
+    },
+    {
+        "edad": 56,
+        "peso": 78.4,
+        "altura": 1.81,
+        "porcentaje_grasa": 30.67
+    },
+    {
+        "edad": 32,
+        "peso": 78.1,
+        "altura": 1.67,
+        "porcentaje_grasa": 25.99
+    },
+    {
+        "edad": 55,
+        "peso": 81.7,
+        "altura": 1.96,
+        "porcentaje_grasa": 30.18
+    },
+    {
+        "edad": 37,
+        "peso": 73.9,
+        "altura": 1.99,
+        "porcentaje_grasa": 23.95
+    },
+    {
+        "edad": 29,
+        "peso": 105.7,
+        "altura": 1.97,
+        "porcentaje_grasa": 35.87
+    },
+    {
+        "edad": 21,
+        "peso": 71.1,
+        "altura": 1.98,
+        "porcentaje_grasa": 17.99
+    },
+    {
+        "edad": 55,
+        "peso": 83.5,
+        "altura": 1.98,
+        "porcentaje_grasa": 34.31
+    },
+    {
+        "edad": 21,
+        "peso": 58.6,
+        "altura": 1.57,
+        "porcentaje_grasa": 19.08
+    },
+    {
+        "edad": 34,
+        "peso": 74.3,
+        "altura": 1.8,
+        "porcentaje_grasa": 25.2
+    },
+    {
+        "edad": 23,
+        "peso": 54.1,
+        "altura": 1.91,
+        "porcentaje_grasa": 14.5
+    },
+    {
+        "edad": 52,
+        "peso": 108.0,
+        "altura": 1.53,
+        "porcentaje_grasa": 45
+    },
+    {
+        "edad": 56,
+        "peso": 115.0,
+        "altura": 1.54,
+        "porcentaje_grasa": 45
+    },
+    {
+        "edad": 46,
+        "peso": 58.3,
+        "altura": 1.72,
+        "porcentaje_grasa": 23.99
+    },
+    {
+        "edad": 45,
+        "peso": 112.1,
+        "altura": 1.98,
+        "porcentaje_grasa": 41.88
+    },
+    {
+        "edad": 53,
+        "peso": 66.9,
+        "altura": 1.86,
+        "porcentaje_grasa": 24.7
+    },
+    {
+        "edad": 21,
+        "peso": 77.4,
+        "altura": 1.99,
+        "porcentaje_grasa": 21.21
+    },
+    {
+        "edad": 18,
+        "peso": 53.1,
+        "altura": 1.8,
+        "porcentaje_grasa": 14.53
+    },
+    {
+        "edad": 30,
+        "peso": 117.1,
+        "altura": 1.71,
+        "porcentaje_grasa": 44.07
+    },
+    {
+        "edad": 38,
+        "peso": 67.6,
+        "altura": 1.86,
+        "porcentaje_grasa": 23.23
+    },
+    {
+        "edad": 63,
+        "peso": 95.4,
+        "altura": 1.83,
+        "porcentaje_grasa": 39.61
+    },
+    {
+        "edad": 44,
+        "peso": 62.5,
+        "altura": 1.7,
+        "porcentaje_grasa": 25.7
+    },
+    {
+        "edad": 25,
+        "peso": 91.4,
+        "altura": 1.75,
+        "porcentaje_grasa": 29.58
+    },
+    {
+        "edad": 47,
+        "peso": 70.0,
+        "altura": 1.74,
+        "porcentaje_grasa": 28.06
+    },
+    {
+        "edad": 42,
+        "peso": 92.6,
+        "altura": 1.67,
+        "porcentaje_grasa": 35.18
+    },
+    {
+        "edad": 38,
+        "peso": 53.8,
+        "altura": 1.93,
+        "porcentaje_grasa": 17.03
+    },
+    {
+        "edad": 41,
+        "peso": 65.1,
+        "altura": 1.91,
+        "porcentaje_grasa": 21.75
+    },
+    {
+        "edad": 65,
+        "peso": 101.9,
+        "altura": 1.7,
+        "porcentaje_grasa": 43.82
+    },
+    {
+        "edad": 36,
+        "peso": 54.5,
+        "altura": 1.93,
+        "porcentaje_grasa": 16.86
+    },
+    {
+        "edad": 41,
+        "peso": 50.1,
+        "altura": 1.92,
+        "porcentaje_grasa": 14.79
+    },
+    {
+        "edad": 20,
+        "peso": 83.6,
+        "altura": 1.93,
+        "porcentaje_grasa": 23.13
+    },
+    {
+        "edad": 40,
+        "peso": 87.4,
+        "altura": 1.72,
+        "porcentaje_grasa": 33.54
+    },
+    {
+        "edad": 24,
+        "peso": 57.4,
+        "altura": 1.71,
+        "porcentaje_grasa": 15.33
+    },
+    {
+        "edad": 31,
+        "peso": 108.5,
+        "altura": 1.92,
+        "porcentaje_grasa": 38.25
+    },
+    {
+        "edad": 64,
+        "peso": 83.3,
+        "altura": 1.72,
+        "porcentaje_grasa": 38.69
+    },
+    {
+        "edad": 37,
+        "peso": 74.1,
+        "altura": 1.89,
+        "porcentaje_grasa": 25.3
+    },
+    {
+        "edad": 22,
+        "peso": 95.2,
+        "altura": 1.81,
+        "porcentaje_grasa": 28.83
+    },
+    {
+        "edad": 48,
+        "peso": 119.3,
+        "altura": 1.54,
+        "porcentaje_grasa": 45
+    },
+    {
+        "edad": 57,
+        "peso": 84.4,
+        "altura": 1.91,
+        "porcentaje_grasa": 34.72
+    },
+    {
+        "edad": 51,
+        "peso": 55.9,
+        "altura": 1.6,
+        "porcentaje_grasa": 22.98
+    },
+    {
+        "edad": 61,
+        "peso": 53.2,
+        "altura": 1.61,
+        "porcentaje_grasa": 26.59
+    },
+    {
+        "edad": 41,
+        "peso": 117.4,
+        "altura": 1.62,
+        "porcentaje_grasa": 45
+    },
+    {
+        "edad": 63,
+        "peso": 87.6,
+        "altura": 1.72,
+        "porcentaje_grasa": 38.29
+    },
+    {
+        "edad": 22,
+        "peso": 108.3,
+        "altura": 1.55,
+        "porcentaje_grasa": 37.96
+    },
+    {
+        "edad": 50,
+        "peso": 112.3,
+        "altura": 1.78,
+        "porcentaje_grasa": 43.64
+    }
+]
